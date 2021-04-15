@@ -44,7 +44,7 @@ def sigmoid(x):
 
 def g_sigmoid(x):
   x_ = sigmoid(x)
-  return 0.98*x_ * (1 - x_)
+  return x_ * (1 - x_) / 0.98
 
 def cross_entropy(y, y_):
   return (y-1) * np.log(1 - y_) - y * np.log(y_)
